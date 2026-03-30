@@ -167,7 +167,7 @@ const HomePage = ({ onBackHome }) => {
                   </svg>
                 </button>
                 <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-500">
-                  Career Matches
+                  Ai Career Finder
                 </span>
               </div>
 
