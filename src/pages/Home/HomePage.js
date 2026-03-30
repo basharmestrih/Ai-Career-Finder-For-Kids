@@ -260,22 +260,43 @@ const HomePage = ({ onBackHome }) => {
 
             <div className="flex-1 overflow-y-auto">
               <div className="mx-auto max-w-3xl px-4 py-6 sm:px-6 md:px-8 md:py-8 xl:px-12 xl:py-10">
-                <div className="mb-6 flex gap-3 overflow-x-auto pb-2 md:hidden">
-                  {steps.map((step) => (
-                    <button
-                      key={`mobile-step-${step.id}`}
-                      type="button"
-                      onClick={() => setActiveStep(step.id)}
-                      className={`shrink-0 rounded-full border px-4 py-2 text-xs font-semibold transition ${
-                        activeStep === step.id
-                          ? "border-indigo-600 bg-indigo-600 text-white"
-                          : "border-slate-200 bg-white text-slate-500"
-                      }`}
-                    >
-                      {step.id}. {step.title}
-                    </button>
-                  ))}
+              <div className="mb-6 md:hidden flex justify-center">
+              <div className="w-full max-w-sm">
+                <div className="flex items-center justify-center gap-x-10">
+                  {steps.map((step, index) => {
+                    const isActive = activeStep === step.id;
+                    const isCompleted = activeStep > step.id;
+
+                    return (
+                      <div key={step.id} className="flex items-center">
+                        
+                        {/* Step circle */}
+                        <div
+                          onClick={() => setActiveStep(step.id)}
+                          className={`flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center rounded-full text-xs font-bold transition-all duration-300
+                            ${
+                              isCompleted || isActive
+                                ? "bg-indigo-600 text-white"
+                                : "border border-slate-300 bg-white text-slate-400"
+                            }
+                          `}
+                        >
+                          {isCompleted ? "✓" : step.id}
+                        </div>
+
+             
+                      
+                      </div>
+                    );
+                  })}
                 </div>
+
+                <p className="mt-3 text-center text-xl tracking-widest font-bold text-slate-600">
+                  {steps[activeStep - 1].title}
+                </p>
+              </div>
+            </div>
+         
                 <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">{renderStepContent()}</div>
                 {error ? <p className="mt-6 text-sm font-medium text-rose-600">{error}</p> : null}
               </div>

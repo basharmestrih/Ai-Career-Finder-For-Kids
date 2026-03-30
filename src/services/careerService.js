@@ -1,7 +1,7 @@
 const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
 
 export async function requestCareerSuggestion({ prompt, selections }) {
-  const apiKey = "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";
+  const apiKey = process.env.REACT_APP_OPENROUTER_API_KEY;
 
   if (!apiKey) {
     throw new Error("Missing REACT_APP_OPENROUTER_API_KEY environment variable.");
