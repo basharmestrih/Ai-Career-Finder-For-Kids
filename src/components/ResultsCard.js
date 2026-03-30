@@ -72,16 +72,13 @@ const ResultsCard = ({ career, index }) => {
         <section>
           <p className="text-xs font-bold uppercase tracking-[0.24em] text-slate-500">YouTube Courses</p>
           <div className="mt-3 space-y-3">
-            {(career.CoursesNames  || []).map((course, courseIndex) => (
+            {(career.youtubeCourses  || []).map((course, courseIndex) => (
               <div
                 key={`${career.career}-course-${courseIndex}`}
                 className="flex flex-col items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 sm:flex-row sm:items-center sm:justify-between"
               >
                 <p className="min-w-0 flex-1 text-sm font-medium leading-6 text-slate-700">{course.name}</p>
-                <p className={`rounded-full px-3 py-1 text-xs font-semibold ${theme.badge}`}>
-                  {course.platform}
-                </p>
-   
+
               </div>
             ))}
           </div>

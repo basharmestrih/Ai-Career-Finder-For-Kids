@@ -53,10 +53,9 @@ Each career MUST include:
 - "career": Clear and simple career name
 - "whyItFits": 2–3 sentences explaining WHY it matches my personality, skills, and interests
 - "roadmap": An array of 4–6 simple, practical steps a beginner kid can follow (clear and actionable)
-- "CoursesNames": An array of 2–3 REAL courses/tutorials
+- "youtubeCourses": An array of 2–3 REAL courses/tutorials
   Each course MUST include:
     - "name": Real course/video title
-    - "platform": A famous learning platform
 
 - "advice": Friendly, practical advice for a beginner
 
@@ -80,8 +79,8 @@ const normalizeCareer = (career) => ({
   career: career?.career || "Career Match",
   whyItFits: career?.whyItFits || "",
   roadmap: Array.isArray(career?.roadmap) ? career.roadmap : [],
-  CoursesNames: Array.isArray(career?.CoursesNames)
-    ? career.CoursesNames.map(normalizeCourse)
+  youtubeCourses: Array.isArray(career?.youtubeCourses)
+    ? career.youtubeCourses.map(normalizeCourse)
     : [],
   advice: career?.advice || "",
 });
