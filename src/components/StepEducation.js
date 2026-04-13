@@ -2,17 +2,20 @@ import { useCareerSelections } from '../hooks/useCareerSelections';
 
 const StepEducation = () => {
   const { education: choice, setEducation } = useCareerSelections();
-const levels = [
-  "Elementary School",
-  "Middle School",
-  "High School"
-];
+  const levels = [
+    "Elementary School Student",
+    "Middle School Student",
+    "High School Student",
+    "Undergraduate Student",
+    "Bachelor's Degree Graduate",
+    "Master's Degree Graduate",
+  ];
 
   return (
     <div className="space-y-4 sm:space-y-6">
       <div>
-        <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl">Pick your class</h3>
-        <p className="text-sm text-slate-500">Let us know which learning path you completed most recently.</p>
+        <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl">Pick your education level</h3>
+        <p className="text-sm text-slate-500">Choose the option that best matches where you are in your learning journey.</p>
       </div>
       <div className="space-y-3">
         {levels.map((level) => (

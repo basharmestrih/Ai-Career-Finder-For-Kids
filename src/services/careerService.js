@@ -1,30 +1,33 @@
-const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
+const GROQ_URL = "https://api.groq.com/openai/v1/chat/completions";
 
 export async function requestCareerSuggestion({ prompt, selections }) {
-  const apiKey = process.env.REACT_APP_OPENROUTER_API_KEY;
+  const apiKey = process.env.REACT_APP_GROQ_API_KEY;
 
   if (!apiKey) {
-    throw new Error("Missing REACT_APP_OPENROUTER_API_KEY environment variable.");
+    throw new Error("Missing REACT_APP_GROQ_API_KEY environment variable.");
   }
 
-  const response = await fetch(OPENROUTER_URL, {
+  const response = await fetch(GROQ_URL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${apiKey}`,
     },
     body: JSON.stringify({
-      model: "nvidia/nemotron-3-nano-30b-a3b:free",
+      model: "llama-3.3-70b-versatile",
       messages: [
         {
           role: "user",
           content: prompt,
         },
       ],
-      metadata: {
-        feature: "career-finder",
-        selections,
-      },
+      response_format: { type: "json_object" },
+      temperature: 1,
+      max_completion_tokens: 1024,
+      top_p: 1,
+      stream: false,
+      stop: null,
+ 
     }),
   });
 

@@ -2,26 +2,50 @@ import Chip from './Chip';
 import { useCareerSelections } from '../hooks/useCareerSelections';
 
 const topics = [
-  'Software Development',
-  'UI/UX Design',
-  'Artificial Intelligence',
-  'Cybersecurity',
-  'Game Development',
-  'Robotics & Engineering',
-  'Digital Art & Illustration',
-  'Content Creation & Media',
-  'Esports & Gaming',
-  'Business & Entrepreneurship',
-  'Finance & Investing',
-  'Marketing & Branding',
-  'Data Science & Analytics',
-  'Science & Research',
-  'Healthcare & Medicine',
-  'Education & Teaching',
-  'Public Speaking & Media',
-  'Event Management',
-  'Music & Audio Production',
-  'Writing & Storytelling'
+  "Coding",
+  "Web Design",
+  "Game Making",
+  "AI",
+  "Cyber Safety",
+  "Data Work",
+
+  "Drawing",
+  "Graphic Design",
+  "Video Editing",
+  "Animation",
+  "Photography",
+  "Fashion",
+
+  "Medicine",
+  "Nursing",
+  "Dental Care",
+  "Mental Health",
+
+  "Teaching",
+  "Coaching",
+
+  "Business",
+  "Selling",
+  "Marketing",
+  "Money Management",
+
+  "Content Making",
+  "YouTube",
+  "Social Media",
+
+  "Engineering",
+  "Building",
+  "Machines",
+
+  "Cooking",
+  "Baking",
+
+  "Sports",
+  "Fitness",
+
+  "Writing",
+  "Acting",
+  "Music"
 ];
 
 const StepTopics = () => {

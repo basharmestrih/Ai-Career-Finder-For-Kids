@@ -2,26 +2,26 @@ import Chip from './Chip';
 import { useCareerSelections } from '../hooks/useCareerSelections';
 
 const skills = [
-  'Being Creative',
-  'Thinking Clearly',
-  'Solving Problems',
-  'Thinking Deeply',
-  'Talking Clearly',
-  'Working with Others',
-  'Leading Others',
-  'Managing Time',
-  'Staying Organized',
-  'Adapting Easily',
-  'Staying Focused',
-  'Love Learning',
-  'Paying Attention',
-  'Making Decisions',
-  'Understanding Feelings',
-  'Being Confident',
-  'Working Alone',
-  'Helping Others',
-  'Never Giving Up',
-  'Trying New Ideas'
+  "Be Creative",
+  "Clear Thinking",
+  "Solve Problems",
+  "Think Deep",
+  "Speak Clearly",
+  "Team Work",
+  "Lead Others",
+  "Manage Time",
+  "Stay Organized",
+  "Be Flexible",
+  "Stay Focused",
+  "Love Learning",
+  "Pay Attention",
+  "Make Choices",
+  "Understand Feelings",
+  "Be Confident",
+  "Work Alone",
+  "Help Others",
+  "Keep Trying",
+  "Try New Things"
 ];
 
 
